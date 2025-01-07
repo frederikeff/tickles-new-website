@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import { Clock, MapPin, Calendar, Mail, Heart } from "lucide-react"
+import { Clock, MapPin, Calendar, Heart } from "lucide-react"
 
 const CoachingPage = () => {
   return (
