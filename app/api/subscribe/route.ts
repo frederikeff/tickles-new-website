@@ -1,6 +1,7 @@
 // app/api/subscribe/route.ts
 import { NextResponse } from 'next/server';
-import { SIGNUP_TAGS, type SignupType } from '@/utils/kit';
+import { SIGNUP_TAGS } from '@/utils/kit';
+import type { SignupType } from '@/utils/kit';
 
 interface SubscribeRequest {
   email: string;
@@ -15,6 +16,7 @@ export async function POST(request: Request) {
       throw new Error('Missing API configuration');
     }
 
+    // Subscribe to the form
     const response = await fetch(
       `https://api.convertkit.com/v3/forms/${process.env.KIT_FORM_ID}/subscribe`,
       {
@@ -48,7 +50,11 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Subscription error:', error);
     return NextResponse.json(
-      { success: false, message: 'An unexpected error occurred' },
+      { 
+        success: false, 
+        message: 'An unexpected error occurred',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     );
   }

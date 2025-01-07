@@ -46,13 +46,13 @@ export default function NavBar() {
            
            <div className="ml-6 flex items-center space-x-3">
              <a 
-               href="/login" 
+               href="/products" 
                className="text-sm font-medium text-gray-700 hover:text-rose-500 px-4 py-2 rounded-full transition-all duration-200"
              >
                Login
              </a>
              <a
-               href="/subscribe"
+               href="/newsletter"
                className="px-6 py-2 text-sm font-medium text-white bg-rose-500 rounded-full hover:bg-rose-600 transition-all duration-200 shadow-sm hover:shadow-md"
              >
                Subscribe

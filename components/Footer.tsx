@@ -22,7 +22,7 @@ const footerLinks = {
   social: [
     { 
       name: 'Instagram', 
-      href: 'https://instagram.com/ticklesnyc',
+      href: 'https://instagram.com/ticklesnyc_love',
       icon: Instagram,
       external: true 
     }
